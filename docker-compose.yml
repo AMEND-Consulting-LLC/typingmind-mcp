@@ -1,6 +1,7 @@
 version: '3.9'
 services:
     mcp-connector:
+        build: .
         command: ${AUTHTOKEN}
         image: mcp-connector
         container_name: mcp-connector-instance
