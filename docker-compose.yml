@@ -2,8 +2,9 @@ version: '3.9'
 services:
     mcp-connector:
         build: .
-        command: ${AUTHTOKEN}
         image: mcp-connector
         container_name: mcp-connector-instance
         ports:
             - '12757:12757'
+        environment:
+            - MCP_AUTH_TOKEN=${MCP_AUTH_TOKEN}
